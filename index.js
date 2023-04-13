@@ -20,10 +20,15 @@ function cuotas(){
         alert("No ingreso la cantidad de cuotas")
     }
     let final = resultado
+    let parcial = final
     i = 0;
     while (i < cuotas) {
         i = i+1;
         final = final * 1.1
       }
+    if (cuotas > 0){
+        parcial = final / cuotas
+    }
     document.getElementById("final").innerHTML = final.toFixed(2);
+    document.getElementById("parcial").innerHTML = parcial.toFixed(2);
 }
